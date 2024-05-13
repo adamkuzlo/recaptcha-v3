@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdRLNMpAAAAALcFIZhX4TN_4fXgSt1XE9IE28Y5"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app d-flex justify-content-center">
+      <div class="container captcha-form">
+        <form action="" method="">
+          <h4 class="title">Name and Email Address</h4>
+
+          <!-- Start Name and Email input -->
+          <!-- For the test only fname, lname and email are sent to the server. -->
+          <div>
+            <div class="row g-2">
+              <div class="col-md form-floating mb-2">
+                <input
+                  type="text"
+                  id="firstName"
+                  class="form-control"
+                  placeholder="First name"
+                  name="fname"
+                />
+                <label for="firstName">First Name</label>
+              </div>
+              <div class="col-md form-floating mb-2">
+                <input
+                  type="text"
+                  id="lastName"
+                  class="form-control"
+                  placeholder="Last name"
+                  name="lname"
+                />
+                <label for="lastName">Last Name</label>
+              </div>
+            </div>
+            <div class="form-floating mb-2">
+              <input
+                type="text"
+                id="email"
+                class="form-control"
+                placeholder="Email Adress"
+                name="email"
+              />
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+
+          <!-- Start billing address -->
+          <div>
+            <h4 class="title">Billing Address</h4>
+            <div class="row g-2">
+              <div class="col-md mb-2">
+                <select
+                  class="selectpicker countrypicker form-select px-2 py-3"
+                  data-flag="true"
+                ></select>
+              </div>
+              <div class="col-md form-floating mb-2">
+                <input
+                  type="text"
+                  id="department"
+                  class="form-control"
+                  placeholder="Department"
+                  name="department"
+                />
+                <label for="department">Department</label>
+              </div>
+            </div>
+            <div class="form-floating mb-2">
+              <input
+                type="text"
+                id="address"
+                class="form-control"
+                placeholder="Adress"
+                name="address"
+              />
+              <label for="address">Address</label>
+            </div>
+            <div class="row g-2">
+              <div class="col-md form-floating mb-2">
+                <input
+                  type="text"
+                  id="city"
+                  class="form-control"
+                  placeholder="City"
+                  name="city"
+                />
+                <label for="city">City</label>
+              </div>
+              <div class="col-md form-floating mb-2">
+                <input
+                  type="text"
+                  id="postalCode"
+                  class="form-control"
+                  placeholder="Postal Code"
+                  name="postalCode"
+                />
+                <label for="postalCode">Postal Code</label>
+              </div>
+            </div>
+          </div>
+          <!-- End billing address -->
+
+          <!-- Start payment info -->
+          <div>
+            <h4 class="title">Payment information</h4>
+            <div class="payment-form">
+              <div class="payment-form-inner">
+                <div class="d-flex py-1">
+                  <span class="d-flex align-items-center"
+                    ><svg
+                      class="icon-card"
+                      role="presentation"
+                      fill="var(--colorIcon)"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 4a2 2 0 012-2h12a2 2 0 012 2H0zm0 2v6a2 2 0 002 2h12a2 2 0 002-2V6H0zm3 5a1 1 0 011-1h1a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      ></path></svg
+                  ></span>
+                  <p style="color: #0570de" class="ms-3 mb-0">Card</p>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md-6 mb-2">
+                    <label for="cardNumber">Card Number</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="cardNumber"
+                        class="form-control"
+                        placeholder="1234 1234 1234 1234"
+                        name="cardNumber"
+                      />
+                      <span class=""
+                        ><img
+                          class=""
+                          src="https://img.icons8.com/color/40/000000/mastercard-logo.png"
+                      /></span>
+                      <span class=""
+                        ><img
+                          class=""
+                          src="https://img.icons8.com/color/40/000000/visa.png"
+                      /></span>
+
+                      <span class=""
+                        ><img
+                          class=""
+                          src="https://img.icons8.com/color/40/000000/discover.png"
+                      /></span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-2">
+                    <label for="expiration">Expiration</label>
+                    <input
+                      type="text"
+                      id="expiration"
+                      class="form-control"
+                      placeholder="MM/YY"
+                      name="expiration"
+                    />
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-2">
+                    <label for="cvc">CVC</label>
+                    <input
+                      type="text"
+                      id="cvc"
+                      class="form-control"
+                      placeholder="CVC"
+                      name="cvc"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label for="country">Country</label>
+                  <select
+                    class="selectpicker countrypicker form-select px-2 py-3"
+                    id="country"
+                    data-flag="true"
+                  ></select>
+                </div>
+                <p class="mt-3 note">
+                  By providing your card information, you allow NEUROBED to
+                  charge your card for future payments in accordance with their
+                  terms.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End payment information -->
+
+          <!-- It is used to store the token generated by Google reCAPTCHA v3. -->
+          <div>
+            <input
+              type="hidden"
+              name="recaptcha_response"
+              value=""
+              id="recaptchaResponse"
+            />
+            <div class="d-flex justify-content-end">
+              <input
+                type="submit"
+                name="submit"
+                value="Submit"
+                class="submit-btn"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- utility for country selection -->
+    <script src="bootstrap-select-country.min.js"></script>
+    <!-- handles the form submission and reCAPTCHA verification -->
+
+    <!-- End script -->
+  </body>
+</html>
